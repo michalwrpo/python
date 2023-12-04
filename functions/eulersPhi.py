@@ -6,6 +6,8 @@ def phi(n: int) -> int:
         coprime = coprime // 2
         while n % 2 == 0:
             n = n // 2
+        if n == 1:
+            return coprime
     while i**2 <= n:
         if n % i == 0:
             coprime = coprime * (i - 1) // i
@@ -14,3 +16,5 @@ def phi(n: int) -> int:
         i += 2
     coprime = coprime * (n-1) // n
     return coprime
+
+print(phi(2))
