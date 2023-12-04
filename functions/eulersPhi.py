@@ -11,7 +11,6 @@ def phi(n: int) -> int:
             coprime = coprime * (i - 1) // i
             while n % i == 0:
                 n = n // i
-            i = 1
         i += 2
     coprime = coprime * (n-1) // n
     return coprime
